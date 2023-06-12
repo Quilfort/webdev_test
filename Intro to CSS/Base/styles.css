@@ -1,0 +1,19 @@
+.red-text{
+    color: red
+}
+
+.green-text{
+    color: green
+}
+
+#blue{
+    color: blue
+}
+
+p[draggable]{
+    color: purple
+}
+
+p[draggable="false"]{
+    color: black
+}
