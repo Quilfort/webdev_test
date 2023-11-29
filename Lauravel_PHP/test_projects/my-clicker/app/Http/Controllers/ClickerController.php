@@ -18,13 +18,20 @@ class ClickerController extends Controller
 
     public function create()
     {
-
+        return view('clicks.create');
     }
 
    
     public function store(Request $request)
     {
-        //store a new post
+        $newClick = Clicker::create([
+            'title' => $request->title,
+            'startCount' => $request->startCount,
+            'clicks' => $request->clicks,                
+            'endCount' => $request->endCount
+        ]);
+
+        return redirect('clicks/' . $newClick->id);
     }
 
     public function show(Clicker $clicker)

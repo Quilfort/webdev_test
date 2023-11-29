@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 pt-2">
-                <a href="/click" class="button">Go back</a>
+                <a href="/clicks" class="button">Go back</a>
                 <div>
                     <h1 class="display-one">{{ ucfirst($click->title) }}</h1>
                     <p>Start: {!! $click->startCount !!}</p>
