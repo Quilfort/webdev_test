@@ -1,15 +1,19 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Clicker;
 use Illuminate\Http\Request;
 
-class BlogPostController extends Controller
+class ClickerController extends Controller
 {
     
     public function index()
     {
-
+        $clicks = Clicker::all();
+        return view('clicks.index', [
+            'clicks' => $clicks,
+        ]);
     }
 
     public function create()
@@ -25,7 +29,9 @@ class BlogPostController extends Controller
 
     public function show(Clicker $clicker)
     {
-        //show a blog post
+        return view('clicks.show', [
+            'click' => $clicker,
+        ]);
     }
 
     
