@@ -11,7 +11,7 @@
 <style>
     .code {
       min-height: calc({{ num_lines }}em * 1.5 + 2 * 1em);
-      min-width: (calc({{ max_chars }}ch + 4 * 2em));
+      min-width: calc({{ max_chars }}ch + 4 * 2em);
     }
 </style>
 
@@ -26,10 +26,9 @@
         <button formmethod="post" formaction="{{ url_for('reset_session') }}">
             Reset your Session
         </button>
-        <button formmethod="post" formaction="{{ url_for('save_code') }}">
-            Save your code
+        <button formmethod="post" formaction="{{ url_for('save_style') }}">
+            Style your code
         </button>
-
     </div>    
 </form>
 {% endblock content %}
