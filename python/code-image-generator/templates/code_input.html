@@ -1,0 +1,17 @@
+<!-- templates/code_input.html -->
+
+{% extends "base.html" %}
+
+{% block title %}
+  - Code Input
+{% endblock title %}
+
+{% block content %}
+<form>
+    <textarea
+        class="code"
+        name="code"
+        placeholder="Paste here your Python code"
+    >{{ code }}</textarea>    
+</form>
+{% endblock content %}
