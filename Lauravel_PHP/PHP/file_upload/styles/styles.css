@@ -1,0 +1,41 @@
+form {
+    font-weight: bold;    
+}
+
+button {
+    border-radius: 8px;
+    background-color: #04AA6D;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #bbb;
+
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.active {
+    background-color: #04AA6D;
+  }

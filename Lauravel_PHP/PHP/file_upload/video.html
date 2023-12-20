@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Video Upload</title>
+</head>
+
+<nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/video.html">Video</a></li>
+      <li><a href="/pdf.html">PDF</a></li>
+    </ul>
+</nav>
+
+<body>
+
+    <div>
+        <form action="scripts/upload_video.php" method="post" enctype="multipart/form-data">
+            Select video to upload (MP4 only):
+            <input type="file" name="fileToUpload" id="fileToUpload" accept=".mp4">
+            <input type="submit" value="Upload file" name="submit">
+        </form>
+    </div>
+  
+    <div>
+        <button id="buttonVideo" onclick="toggleVideo()">Show Video</button>
+    </div>
+
+    <div>
+        <video id="displayVideo" controls style="display: none;">
+            <source src="uploads/video/2_productvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- <p id="errorMessage" style="display: none;">No video available</p> -->
+    </div>
+
+    <script>
+        function toggleVideo() {
+            var video = document.getElementById("displayVideo");
+            var button = document.getElementById("buttonVideo");
+            var errorMessage = document.getElementById("errorMessage");
+    
+            if (video.style.display === "none") {
+                video.style.display = "block";
+                button.innerHTML = "Hide Video";
+            } else {
+                video.style.display = "none";
+                button.innerHTML = "Show Video";
+            }
+
+            // if (video.style.display === "block" && video.canPlayType && video.canPlayType('video/mp4') === '') {
+            //     video.style.display = 'none';
+            //     errorMessage.style.display = 'block';
+            // } else {
+            //     errorMessage.style.display = 'none';
+            // }
+        }
+    </script>
+  
+</body>
+</html>
