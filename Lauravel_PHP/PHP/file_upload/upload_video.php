@@ -1,7 +1,8 @@
 <?php
-  $target_dir = "uploads/";
+  $target_dir = "uploads/video/";
   $index = uniqid();
-  $target_file = $target_dir . $index . '_' . basename($_FILES["fileToUpload"]["name"]);
+//   $target_file = $target_dir . $index . '_' . basename($_FILES["fileToUpload"]["name"]);
+    $target_file = $target_dir . '1'. '_' . 'productvideo.mp4';
   $uploadOk = 1;
   $videoFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
